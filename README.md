@@ -8,3 +8,5 @@
 6. git log
 7. git commit --amend // Permite editar el nombre del ultimo commit
 8. git checkout -b rama-heroes
+9. git checkout master
+10. get merge rama-heroes
