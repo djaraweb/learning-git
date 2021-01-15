@@ -14,3 +14,4 @@
 12. git remote add origin https://github.com/djaraweb/learning-git.git // Establecer conexion remota con un repositorio.
 13. git branch -M main //Renombrar el nombre del master a main
 14. git push -u origin main // Subir los cambios al repositorio
+17. git pull // traer informacion del repo remoto al local
