@@ -10,3 +10,7 @@
 8. git checkout -b rama-heroes // Crea una rama y se ubica en la rama creada
 9. git checkout master
 10. get merge rama-heroes
+11. git branch -d rama-heroes // Borrar rama indicada
+12. git remote add origin https://github.com/djaraweb/learning-git.git // Establecer conexion remota con un repositorio.
+13. git branch -M main //Renombrar el nombre del master a main
+14. git push -u origin main // Subir los cambios al repositorio
