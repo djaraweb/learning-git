@@ -76,6 +76,13 @@ $ git branch -r  [se muestran todas las ramas remotas]
 $ git branch -a  [se muestran todas las ramas tanto locales como remotas]
 ```
 
+
+#### _**Nos muestra las Url de conexiones remotas:**_
+
+```sh
+$ git remote -v [muestra las URLs que Git ha asociado al nombre y que serán usadas al leer y escribir en ese remoto]
+```
+
 #### _**Sirve para moverse entre branches, en este caso vamos al branch que indicamos en el comando:**_
 
 ```sh
