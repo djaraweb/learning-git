@@ -139,6 +139,8 @@ $ git push
 ```sh
 $ git pull origin NombreDeBranch
 $ git pull
+$ git pull origin master --allow-unrelated-histories
+
 ```
 
 #### _**Ver logs y detalle de cambios realizados:**_
