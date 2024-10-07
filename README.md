@@ -22,8 +22,11 @@
 #### _**Configuración Inicial:**_
 
 ```sh
-$ git config --global user.name "Deyvi Jara"
-$ git config --global user.email djaravirtual@gmail.com
+$ git config --global user.name "Nombre github"
+$ git config --global user.email "correo@gmail.com"
+$ git config --global init.defaultBranch main
+$ git config --global core.editor "code --wait"
+
 ```
 
 #### _**Crea localmente un repositorio:**_
@@ -38,16 +41,33 @@ $ git init
 $ git config -l
 ```
 
-#### _**Agrega TODOS los archivos y carpetas que estén en nuestro proyecto al staging area:**_
+#### _**Agrega Archivo/TODOS los archivos y carpetas que estén en nuestro proyecto al staging area:**_
 
 ```sh
+$ git add <path>
 $ git add .
+```
+
+#### _**Regresar archivos del staging al workspace:**_
+
+```sh
+$ git rm --cached <nameFile>
+$ git reset <folder o path/nameFile>
+$ git restore <file>...
+$ git restore .
+$ git restore --staged <file>
 ```
 
 #### _**Hacer commit a los archivos para que queden guardados en el repositorio:**_
 
 ```sh
-$ git commit -m "Descripción de Commit"
+$ git commit -m "Mensaje del Commit"
+```
+
+#### _**Restaurar cambios al último commit:**_
+
+```sh
+$ git checkout -- .
 ```
 
 #### _**Realiza un commit directamente al repositorio sin pasar por el staging area:**_
@@ -56,10 +76,25 @@ $ git commit -m "Descripción de Commit"
 $ git commit -am "Descripción de Commit"
 ```
 
-#### _**Se agregan los cambios al ultimo commit previo envio de archivos al staging area (gid add .):**_
+#### _**Agregan cambios al ultimo commit y/o modificar el nombre del ultimo commit:**_
 
 ```sh
 $ git commit --amend
+$ git commit --amend -m "Descripción de commit"
+```
+
+#### _**Ver información de commits:**_
+
+```sh
+$ git log
+$ git show "ID"
+```
+
+#### _**Ver información de los cambios efectuados:**_
+
+```sh
+$ git diff "Nombre/Ruta file"
+$ git diff --cached "Nombre/Ruta file"
 ```
 
 #### _**Crea un nuevo branch y automaticamente GIT se cambia al branch creado, clonando el branch desde donde ejecutamos el comando:**_
@@ -74,8 +109,8 @@ $ git checkout -b NombreDeBranch
 $ git branch [se muestran todas las ramas locales]
 $ git branch -r  [se muestran todas las ramas remotas]
 $ git branch -a  [se muestran todas las ramas tanto locales como remotas]
+$ git branch -m master main [Camiar el nombre de la rama]
 ```
-
 
 #### _**Nos muestra las Url de conexiones remotas:**_
 
@@ -178,4 +213,18 @@ GIT_AUTHOR_EMAIL='djaravirtual@gmail.com'
 GIT_COMMITTER_NAME='Deyvi Jara'
 GIT_COMMITTER_EMAIL='djaravirtual@gmail.com'
 " HEAD
+```
+
+## _**Crear Alias en Git :**_
+
+# Log
+
+```
+git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+```
+
+# Status
+
+```
+git config --global alias.s "status -sb"
 ```
