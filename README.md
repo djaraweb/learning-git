@@ -228,3 +228,17 @@ git config --global alias.lg "log --graph --abbrev-commit --decorate --format=fo
 ```
 git config --global alias.s "status -sb"
 ```
+
+
+# Probar tu conexión SSH
+```
+ssh -T git@github.com
+```
+
+# Generación de una nueva clave SSH
+
+```
+ssh-keygen -t ed25519 -C "your_email@example.com"
+ssh-keygen -t rsa -b 4096 -C "tu_email@gmail.com"
+ssh-keygen -t rsa -o -C "bitbucket-ssh@rappipay"
+```
