@@ -233,12 +233,20 @@ git config --global alias.s "status -sb"
 # Probar tu conexión SSH
 ```
 ssh -T git@github.com
+ssh -T git@bitbucket.org
 ```
 
 # Generación de una nueva clave SSH
 
 ```
+mkdir .ssh
+cd ~/.ssh
 ssh-keygen -t ed25519 -C "your_email@example.com"
-ssh-keygen -t rsa -b 4096 -C "tu_email@gmail.com"
-ssh-keygen -t rsa -o -C "bitbucket-ssh@rappipay"
+```
+
+# Permiso Denegado para clave ssh
+```
+Permission denied (publickey)?
+ssh-add ~/.ssh/id_ed25519
+donde : id_ed25519 es la clave generada.
 ```
