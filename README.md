@@ -242,6 +242,9 @@ ssh -T git@bitbucket.org
 mkdir .ssh
 cd ~/.ssh
 ssh-keygen -t ed25519 -C "your_email@example.com"
+ssh-keygen -t rsa -o -C "bitbucket-ssh@example.com"
+
+Configurar ssh en bitbucket: https://bitbucket.org/account/settings/
 ```
 
 # Permiso Denegado para clave ssh
